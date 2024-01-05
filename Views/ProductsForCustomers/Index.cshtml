@@ -1,0 +1,26 @@
+﻿@model IEnumerable<OkZim.Models.Product>
+
+
+
+<h1 align="center">Products</h1>
+<br />
+<br />
+
+
+<div class="product-grid" align="justify">
+    @foreach (var product in Model)
+    {
+        <div class="product-card">
+            <img style="max-width: 300px;" src="@product.imageUrl" alt="@product.ProductName" />
+            <h3>@product.ProductName</h3>
+            <p>@product.ProductCategory</p>
+            <p>Price: @product.ProductPrice USD</p>
+            <p>
+            </p>
+            @Html.ActionLink("Add To Cart","AddToCart","Products", new { productId = product.ProductID, quantity = 1 }, null)
+
+        </div>
+    }
+</div>
+
+

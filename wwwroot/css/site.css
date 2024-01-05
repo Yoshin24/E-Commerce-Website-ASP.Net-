@@ -1,0 +1,192 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.navbar-brand img{
+    width:80px;
+    height:30px;
+}
+
+body {
+    font-family: sans-serif;
+    color: black;
+    background-color: whitesmoke;
+    margin-bottom: 60px;
+    align-items: center;
+    justify-content: center;
+    /*background:linear-gradient(to right bottom, white red);*/
+}
+.groceries img{
+    width:1100px;
+    height:600px;
+    align-items:center;
+}
+.display h1{
+    color:black;
+}
+.h1 {
+    text-align: center;
+    font-size: 30px;
+    font-style: oblique;
+    border:2px;
+    border-block:thick;
+    border-block-color:black;
+    border-radius:6px;
+    font-weight:200;
+}
+
+.promo h2{
+    text-align:center;
+    color:red;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style:italic;
+    font-size:40px;
+    
+}
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 20px;
+    align-items: center;
+    background-color:transparent;
+}
+
+.product-card {
+    border: 2px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+.mynav {
+    text-align: right;
+    overflow: hidden;
+    display: inline;
+    display: flex;
+    flex: 1;
+}
+
+.mynav nav a {
+        text-decoration: none;
+        padding: 10px 16px;
+        text-align: right;
+        justify-content: space-between;
+        display: inline-flex;
+    }
+.mynav a:hover {
+        background-color: red;
+        color: white;
+        transition: 1s;
+        border-radius: 8px;
+    }
+
+.slider {
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.slides {
+    width: 500px;
+    height: 500px;
+    display:flex;   
+}
+
+.slides input{
+    display:none;
+
+}
+.slide{
+    width:20%;
+    transition:2s;
+}
+
+.slide img{
+    align-content:baseline;
+    align-items:center;
+    width:600px;
+    height:400px;
+}
+
+/*css for manual slide navigation*/
+
+.navigation-manual{
+    position:absolute;
+    width:800px;
+    margin-top: -40px;
+    display:flex;
+    justify-content:center;
+}
+.manual-btn{
+    border: 2px solid red;
+    padding:5px;
+    border-radius: 10px;
+    cursor:pointer;
+    transition:1s;
+}
+.manual-btn:not(:last-child){
+    margin-right:40px;
+}
+.manual-btn:hover{
+    background:red;
+}
+
+#radio1:checked ~ .first{
+    margin-left:0;
+}
+#radio2:checked ~ .first {
+    margin-left: -20%;
+}
+#radio3:checked ~ .first {
+    margin-left: -40%;
+}
+#radio4:checked ~ .first {
+    margin-left: -60%;
+}
+
+/*Css for automatic navigation*/
+.navigation-auto{
+    position:absolute;
+    display:flex;
+    width:800px;
+    justify-content:center;
+    margin-top:40px;
+
+}
+.navigation-auto div{
+    border:2px solid red;
+    padding:5px;
+    border-radius:10px;
+    transition:1s;
+}
+    .navigation-auto div:not(:last-child){
+        margin-right:40px;
+    }
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+    background:red;
+
+}
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+    background: red;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+    background: red;
+}
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+    background: red;
+}
+
